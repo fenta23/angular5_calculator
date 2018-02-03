@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from './todo.model';
+import { log } from 'core-js/library/web/timers';
 
-console.log('hello world');
 
 @Component({
   selector: 'todo-item',
@@ -16,6 +16,7 @@ export class TodoItemComponent implements OnInit {
 
   ngOnInit() {
     this.editMode = false;
+    console.log('jo')
   }
 
   onKeyUp(e: any) {

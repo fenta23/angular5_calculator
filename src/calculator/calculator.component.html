@@ -1,0 +1,40 @@
+<div class="mat-typography">
+    <h1 class="main-title">Gebührenrechner</h1>
+    <mat-card class="center-card">
+        <mat-form-field>
+            <input matInput placeholder="Jahresumsatz" [(ngModel)]="calculatorModel.amount" (keyup)="onKeyUp($event)">
+        </mat-form-field>
+
+    </mat-card>
+    <mat-card class="center-card padding-none">
+        <mat-card-content>
+
+
+            <mat-selection-list #options>
+                <mat-list-option *ngFor="let option of calculatorOptions"
+                                 (selectionChange)="option.checked=$event.selected; onListOptionChange()">
+
+                    <p matLine>
+                        <span>{{option.name}}</span>
+                        <br>
+                        <span class="mat-caption">{{option.description}} </span>
+                    </p>
+
+                </mat-list-option>
+            </mat-selection-list>
+
+
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="center-card">
+
+        <mat-card-content>
+            Options selected: {{options.selectedOptions.selected.length}}
+
+            <button mat-button>Click me!</button>
+
+        </mat-card-content>
+    </mat-card>
+
+
+</div>
