@@ -1,4 +1,4 @@
-import 'core-js/es7/reflect';
+//import 'core-js/es7/reflect';
 // Angular wants it
 import 'zone.js/dist/zone';
 // Styles
@@ -11,5 +11,5 @@ import { enableProdMode } from '@angular/core';
 
 import '@angular/platform-browser/animations';
 
-//enableProdMode();
+enableProdMode();
 platformBrowserDynamic().bootstrapModule(AppModule);
